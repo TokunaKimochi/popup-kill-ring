@@ -297,7 +297,7 @@ and `pos-tip.el'"
             (popup-kill-ring-clear-inserted)))))))
 
 (defun popup-kill-ring-pos-tip-show (str pos)
-  (when (eq window-system 'x)
+  (when (memq window-system '(x ns w32))
     (pos-tip-show str popup-kill-ring-pos-tip-color pos nil 0 nil nil nil 0)))
 
 (defun popup-kill-ring-select ()
